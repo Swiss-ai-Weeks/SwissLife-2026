@@ -1,0 +1,688 @@
+Tickets: 20000 | unique descriptions: 173
+Services: 20 | 1:1 service->team: True
+Descriptions that appear with all 5 priorities: 104/173
+Median resolution days, priority=lowest: 10.5
+Median resolution days, priority=highest: 11.0
+  automated alert: 37%
+  external/emailed warning: 29%
+  normal: 16%
+  unclear input: 9%
+  misleading title: 9%
+  resolved as cannot reproduce: 25%
+  resolved as clarification: 25%
+  resolved as done: 25%
+  resolved as cancelled: 25%
+
+====================================================================================================
+UNIQUE RECORD INVENTORY
+====================================================================================================
+
+--- 11 UNIQUE TEMPLATES (service abstracted) ---
+
+[T01]   7385 tickets | Incident
+      SUMMARY    : Automated alert triggered for <SERVICE>
+      DESCRIPTION: <SERVICE> generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+      services   : 19 | example id: n/a
+
+[T02]   4212 tickets | Incident
+      SUMMARY    : External email warning received for <SERVICE>
+      DESCRIPTION: A third party sent a warning regarding <SERVICE>. The email references a delayed feed, unusual error output or degraded service performance, but the details are generic and need triage. Please confirm the operational impact and route the issue to the correct owner.
+      services   : 1 | example id: n/a
+
+[T03]   1490 tickets | Incident
+      SUMMARY    : Operational issue reported for <SERVICE>
+      DESCRIPTION: A user reported an operational disruption in <SERVICE>. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+      services   : 19 | example id: n/a
+
+[T04]   1485 tickets | Incident
+      SUMMARY    : Unclear incident input for <SERVICE>
+      DESCRIPTION: The incident note for <SERVICE> is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+      services   : 19 | example id: n/a
+
+[T05]   1428 tickets | Incident
+      SUMMARY    : Incident mislabelled as service request in <SERVICE>
+      DESCRIPTION: This issue was raised against <SERVICE>, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+      services   : 19 | example id: n/a
+
+[T06]   1211 tickets | Service Request
+      SUMMARY    : Email notification received for <SERVICE>
+      DESCRIPTION: An external party sent an email warning related to <SERVICE>. The message references degraded service quality, a delayed feed, or a possible outage. The content is generic and needs triage to determine whether the issue affects the supported service and which team should act.
+      services   : 1 | example id: n/a
+
+[T07]    814 tickets | Service Request
+      SUMMARY    : New license requested for <SERVICE>
+      DESCRIPTION: A new user requires a license for <SERVICE> to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+      services   : 19 | example id: n/a
+
+[T08]    757 tickets | Service Request
+      SUMMARY    : Access requested for <SERVICE>
+      DESCRIPTION: A user needs access to <SERVICE> to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+      services   : 19 | example id: n/a
+
+[T09]    413 tickets | Service Request
+      SUMMARY    : Access removal requested for <SERVICE>
+      DESCRIPTION: The request is to remove access to <SERVICE> following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+      services   : 19 | example id: n/a
+
+[T10]    412 tickets | Service Request
+      SUMMARY    : General request for <SERVICE> with unclear details
+      DESCRIPTION: The ticket text for <SERVICE> is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+      services   : 19 | example id: n/a
+
+[T11]    393 tickets | Service Request
+      SUMMARY    : Incorrect incident title for service request in <SERVICE>
+      DESCRIPTION: The submitted title suggests an incident affecting <SERVICE>, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+      services   : 19 | example id: n/a
+
+--- 173 UNIQUE SUMMARY STRINGS ---
+
+   1. Access removal requested for CRM & Client Portal
+   2. Access removal requested for Cash Management
+   3. Access removal requested for Client Reporting
+   4. Access removal requested for Corporate Actions
+   5. Access removal requested for Fund Pricing
+   6. Access removal requested for Identity & Access Management
+   7. Access removal requested for NAV Calculation
+   8. Access removal requested for Order Management
+   9. Access removal requested for Outlook & Email
+  10. Access removal requested for Portfolio Accounting
+  11. Access removal requested for Regulatory Reporting
+  12. Access removal requested for Rimes Data Feed
+  13. Access removal requested for Risk & Compliance Monitoring
+  14. Access removal requested for Securities Settlement
+  15. Access removal requested for SharePoint & File Storage
+  16. Access removal requested for SimCorp Dimension
+  17. Access removal requested for Tax Reporting
+  18. Access removal requested for Trade Matching
+  19. Access removal requested for Trading Platform
+  20. Access requested for CRM & Client Portal
+  21. Access requested for Cash Management
+  22. Access requested for Client Reporting
+  23. Access requested for Corporate Actions
+  24. Access requested for Fund Pricing
+  25. Access requested for Identity & Access Management
+  26. Access requested for NAV Calculation
+  27. Access requested for Order Management
+  28. Access requested for Outlook & Email
+  29. Access requested for Portfolio Accounting
+  30. Access requested for Regulatory Reporting
+  31. Access requested for Rimes Data Feed
+  32. Access requested for Risk & Compliance Monitoring
+  33. Access requested for Securities Settlement
+  34. Access requested for SharePoint & File Storage
+  35. Access requested for SimCorp Dimension
+  36. Access requested for Tax Reporting
+  37. Access requested for Trade Matching
+  38. Access requested for Trading Platform
+  39. Automated alert triggered for CRM & Client Portal
+  40. Automated alert triggered for Cash Management
+  41. Automated alert triggered for Client Reporting
+  42. Automated alert triggered for Corporate Actions
+  43. Automated alert triggered for Fund Pricing
+  44. Automated alert triggered for Identity & Access Management
+  45. Automated alert triggered for NAV Calculation
+  46. Automated alert triggered for Order Management
+  47. Automated alert triggered for Outlook & Email
+  48. Automated alert triggered for Portfolio Accounting
+  49. Automated alert triggered for Regulatory Reporting
+  50. Automated alert triggered for Rimes Data Feed
+  51. Automated alert triggered for Risk & Compliance Monitoring
+  52. Automated alert triggered for Securities Settlement
+  53. Automated alert triggered for SharePoint & File Storage
+  54. Automated alert triggered for SimCorp Dimension
+  55. Automated alert triggered for Tax Reporting
+  56. Automated alert triggered for Trade Matching
+  57. Automated alert triggered for Trading Platform
+  58. Email notification received for Emailed Support Tickets
+  59. External email warning received for Emailed Support Tickets
+  60. General request for CRM & Client Portal with unclear details
+  61. General request for Cash Management with unclear details
+  62. General request for Client Reporting with unclear details
+  63. General request for Corporate Actions with unclear details
+  64. General request for Fund Pricing with unclear details
+  65. General request for Identity & Access Management with unclear details
+  66. General request for NAV Calculation with unclear details
+  67. General request for Order Management with unclear details
+  68. General request for Outlook & Email with unclear details
+  69. General request for Portfolio Accounting with unclear details
+  70. General request for Regulatory Reporting with unclear details
+  71. General request for Rimes Data Feed with unclear details
+  72. General request for Risk & Compliance Monitoring with unclear details
+  73. General request for Securities Settlement with unclear details
+  74. General request for SharePoint & File Storage with unclear details
+  75. General request for SimCorp Dimension with unclear details
+  76. General request for Tax Reporting with unclear details
+  77. General request for Trade Matching with unclear details
+  78. General request for Trading Platform with unclear details
+  79. Incident mislabelled as service request in CRM & Client Portal
+  80. Incident mislabelled as service request in Cash Management
+  81. Incident mislabelled as service request in Client Reporting
+  82. Incident mislabelled as service request in Corporate Actions
+  83. Incident mislabelled as service request in Fund Pricing
+  84. Incident mislabelled as service request in Identity & Access Management
+  85. Incident mislabelled as service request in NAV Calculation
+  86. Incident mislabelled as service request in Order Management
+  87. Incident mislabelled as service request in Outlook & Email
+  88. Incident mislabelled as service request in Portfolio Accounting
+  89. Incident mislabelled as service request in Regulatory Reporting
+  90. Incident mislabelled as service request in Rimes Data Feed
+  91. Incident mislabelled as service request in Risk & Compliance Monitoring
+  92. Incident mislabelled as service request in Securities Settlement
+  93. Incident mislabelled as service request in SharePoint & File Storage
+  94. Incident mislabelled as service request in SimCorp Dimension
+  95. Incident mislabelled as service request in Tax Reporting
+  96. Incident mislabelled as service request in Trade Matching
+  97. Incident mislabelled as service request in Trading Platform
+  98. Incorrect incident title for service request in CRM & Client Portal
+  99. Incorrect incident title for service request in Cash Management
+ 100. Incorrect incident title for service request in Client Reporting
+ 101. Incorrect incident title for service request in Corporate Actions
+ 102. Incorrect incident title for service request in Fund Pricing
+ 103. Incorrect incident title for service request in Identity & Access Management
+ 104. Incorrect incident title for service request in NAV Calculation
+ 105. Incorrect incident title for service request in Order Management
+ 106. Incorrect incident title for service request in Outlook & Email
+ 107. Incorrect incident title for service request in Portfolio Accounting
+ 108. Incorrect incident title for service request in Regulatory Reporting
+ 109. Incorrect incident title for service request in Rimes Data Feed
+ 110. Incorrect incident title for service request in Risk & Compliance Monitoring
+ 111. Incorrect incident title for service request in Securities Settlement
+ 112. Incorrect incident title for service request in SharePoint & File Storage
+ 113. Incorrect incident title for service request in SimCorp Dimension
+ 114. Incorrect incident title for service request in Tax Reporting
+ 115. Incorrect incident title for service request in Trade Matching
+ 116. Incorrect incident title for service request in Trading Platform
+ 117. New license requested for CRM & Client Portal
+ 118. New license requested for Cash Management
+ 119. New license requested for Client Reporting
+ 120. New license requested for Corporate Actions
+ 121. New license requested for Fund Pricing
+ 122. New license requested for Identity & Access Management
+ 123. New license requested for NAV Calculation
+ 124. New license requested for Order Management
+ 125. New license requested for Outlook & Email
+ 126. New license requested for Portfolio Accounting
+ 127. New license requested for Regulatory Reporting
+ 128. New license requested for Rimes Data Feed
+ 129. New license requested for Risk & Compliance Monitoring
+ 130. New license requested for Securities Settlement
+ 131. New license requested for SharePoint & File Storage
+ 132. New license requested for SimCorp Dimension
+ 133. New license requested for Tax Reporting
+ 134. New license requested for Trade Matching
+ 135. New license requested for Trading Platform
+ 136. Operational issue reported for CRM & Client Portal
+ 137. Operational issue reported for Cash Management
+ 138. Operational issue reported for Client Reporting
+ 139. Operational issue reported for Corporate Actions
+ 140. Operational issue reported for Fund Pricing
+ 141. Operational issue reported for Identity & Access Management
+ 142. Operational issue reported for NAV Calculation
+ 143. Operational issue reported for Order Management
+ 144. Operational issue reported for Outlook & Email
+ 145. Operational issue reported for Portfolio Accounting
+ 146. Operational issue reported for Regulatory Reporting
+ 147. Operational issue reported for Rimes Data Feed
+ 148. Operational issue reported for Risk & Compliance Monitoring
+ 149. Operational issue reported for Securities Settlement
+ 150. Operational issue reported for SharePoint & File Storage
+ 151. Operational issue reported for SimCorp Dimension
+ 152. Operational issue reported for Tax Reporting
+ 153. Operational issue reported for Trade Matching
+ 154. Operational issue reported for Trading Platform
+ 155. Unclear incident input for CRM & Client Portal
+ 156. Unclear incident input for Cash Management
+ 157. Unclear incident input for Client Reporting
+ 158. Unclear incident input for Corporate Actions
+ 159. Unclear incident input for Fund Pricing
+ 160. Unclear incident input for Identity & Access Management
+ 161. Unclear incident input for NAV Calculation
+ 162. Unclear incident input for Order Management
+ 163. Unclear incident input for Outlook & Email
+ 164. Unclear incident input for Portfolio Accounting
+ 165. Unclear incident input for Regulatory Reporting
+ 166. Unclear incident input for Rimes Data Feed
+ 167. Unclear incident input for Risk & Compliance Monitoring
+ 168. Unclear incident input for Securities Settlement
+ 169. Unclear incident input for SharePoint & File Storage
+ 170. Unclear incident input for SimCorp Dimension
+ 171. Unclear incident input for Tax Reporting
+ 172. Unclear incident input for Trade Matching
+ 173. Unclear incident input for Trading Platform
+
+--- 173 UNIQUE DESCRIPTION STRINGS ---
+
+   1. A new user requires a license for CRM & Client Portal to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+   2. A new user requires a license for Cash Management to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+   3. A new user requires a license for Client Reporting to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+   4. A new user requires a license for Corporate Actions to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+   5. A new user requires a license for Fund Pricing to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+   6. A new user requires a license for Identity & Access Management to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+   7. A new user requires a license for NAV Calculation to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+   8. A new user requires a license for Order Management to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+   9. A new user requires a license for Outlook & Email to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+  10. A new user requires a license for Portfolio Accounting to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+  11. A new user requires a license for Regulatory Reporting to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+  12. A new user requires a license for Rimes Data Feed to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+  13. A new user requires a license for Risk & Compliance Monitoring to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+  14. A new user requires a license for Securities Settlement to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+  15. A new user requires a license for SharePoint & File Storage to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+  16. A new user requires a license for SimCorp Dimension to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+  17. A new user requires a license for Tax Reporting to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+  18. A new user requires a license for Trade Matching to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+  19. A new user requires a license for Trading Platform to support an operational activity. The request includes the relevant user details and justification and needs validation before the entitlement is assigned.
+  20. A third party sent a warning regarding Emailed Support Tickets. The email references a delayed feed, unusual error output or degraded service performance, but the details are generic and need triage. Please confirm the operational impact and route the issue to the correct owner.
+  21. A user needs access to CRM & Client Portal to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  22. A user needs access to Cash Management to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  23. A user needs access to Client Reporting to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  24. A user needs access to Corporate Actions to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  25. A user needs access to Fund Pricing to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  26. A user needs access to Identity & Access Management to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  27. A user needs access to NAV Calculation to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  28. A user needs access to Order Management to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  29. A user needs access to Outlook & Email to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  30. A user needs access to Portfolio Accounting to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  31. A user needs access to Regulatory Reporting to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  32. A user needs access to Rimes Data Feed to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  33. A user needs access to Risk & Compliance Monitoring to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  34. A user needs access to Securities Settlement to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  35. A user needs access to SharePoint & File Storage to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  36. A user needs access to SimCorp Dimension to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  37. A user needs access to Tax Reporting to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  38. A user needs access to Trade Matching to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  39. A user needs access to Trading Platform to complete their daily tasks. This request is for standard role-based access and is aligned to the employee's business duties. Please validate the access profile and ensure the user receives the correct permissions in line with policy.
+  40. A user reported an operational disruption in CRM & Client Portal. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  41. A user reported an operational disruption in Cash Management. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  42. A user reported an operational disruption in Client Reporting. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  43. A user reported an operational disruption in Corporate Actions. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  44. A user reported an operational disruption in Fund Pricing. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  45. A user reported an operational disruption in Identity & Access Management. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  46. A user reported an operational disruption in NAV Calculation. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  47. A user reported an operational disruption in Order Management. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  48. A user reported an operational disruption in Outlook & Email. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  49. A user reported an operational disruption in Portfolio Accounting. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  50. A user reported an operational disruption in Regulatory Reporting. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  51. A user reported an operational disruption in Rimes Data Feed. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  52. A user reported an operational disruption in Risk & Compliance Monitoring. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  53. A user reported an operational disruption in Securities Settlement. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  54. A user reported an operational disruption in SharePoint & File Storage. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  55. A user reported an operational disruption in SimCorp Dimension. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  56. A user reported an operational disruption in Tax Reporting. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  57. A user reported an operational disruption in Trade Matching. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  58. A user reported an operational disruption in Trading Platform. The issue description includes business impact, expected behaviour, and clear evidence that the service is no longer operating as intended. Please review the issue, validate the impact, and coordinate the required remediation or workaround.
+  59. An external party sent an email warning related to Emailed Support Tickets. The message references degraded service quality, a delayed feed, or a possible outage. The content is generic and needs triage to determine whether the issue affects the supported service and which team should act.
+  60. CRM & Client Portal generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+  61. Cash Management generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+  62. Client Reporting generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+  63. Corporate Actions generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+  64. Fund Pricing generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+  65. Identity & Access Management generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+  66. NAV Calculation generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+  67. Order Management generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+  68. Outlook & Email generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+  69. Portfolio Accounting generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+  70. Regulatory Reporting generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+  71. Rimes Data Feed generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+  72. Risk & Compliance Monitoring generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+  73. Securities Settlement generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+  74. SharePoint & File Storage generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+  75. SimCorp Dimension generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+  76. Tax Reporting generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+  77. The incident note for CRM & Client Portal is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  78. The incident note for Cash Management is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  79. The incident note for Client Reporting is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  80. The incident note for Corporate Actions is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  81. The incident note for Fund Pricing is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  82. The incident note for Identity & Access Management is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  83. The incident note for NAV Calculation is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  84. The incident note for Order Management is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  85. The incident note for Outlook & Email is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  86. The incident note for Portfolio Accounting is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  87. The incident note for Regulatory Reporting is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  88. The incident note for Rimes Data Feed is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  89. The incident note for Risk & Compliance Monitoring is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  90. The incident note for Securities Settlement is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  91. The incident note for SharePoint & File Storage is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  92. The incident note for SimCorp Dimension is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  93. The incident note for Tax Reporting is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  94. The incident note for Trade Matching is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  95. The incident note for Trading Platform is not aligned with the expected service context and contains malformed or unrelated information. The content appears to be accidental or misrouted, and it needs a quick validation to decide whether it should be closed or reassigned.
+  96. The request is to remove access to CRM & Client Portal following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+  97. The request is to remove access to Cash Management following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+  98. The request is to remove access to Client Reporting following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+  99. The request is to remove access to Corporate Actions following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+ 100. The request is to remove access to Fund Pricing following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+ 101. The request is to remove access to Identity & Access Management following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+ 102. The request is to remove access to NAV Calculation following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+ 103. The request is to remove access to Order Management following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+ 104. The request is to remove access to Outlook & Email following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+ 105. The request is to remove access to Portfolio Accounting following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+ 106. The request is to remove access to Regulatory Reporting following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+ 107. The request is to remove access to Rimes Data Feed following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+ 108. The request is to remove access to Risk & Compliance Monitoring following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+ 109. The request is to remove access to Securities Settlement following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+ 110. The request is to remove access to SharePoint & File Storage following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+ 111. The request is to remove access to SimCorp Dimension following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+ 112. The request is to remove access to Tax Reporting following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+ 113. The request is to remove access to Trade Matching following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+ 114. The request is to remove access to Trading Platform following a role change or contract end. Please confirm all permissions, inherited groups, and temporary rights are removed so no user remains active beyond the agreed period.
+ 115. The submitted title suggests an incident affecting CRM & Client Portal, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 116. The submitted title suggests an incident affecting Cash Management, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 117. The submitted title suggests an incident affecting Client Reporting, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 118. The submitted title suggests an incident affecting Corporate Actions, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 119. The submitted title suggests an incident affecting Fund Pricing, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 120. The submitted title suggests an incident affecting Identity & Access Management, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 121. The submitted title suggests an incident affecting NAV Calculation, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 122. The submitted title suggests an incident affecting Order Management, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 123. The submitted title suggests an incident affecting Outlook & Email, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 124. The submitted title suggests an incident affecting Portfolio Accounting, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 125. The submitted title suggests an incident affecting Regulatory Reporting, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 126. The submitted title suggests an incident affecting Rimes Data Feed, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 127. The submitted title suggests an incident affecting Risk & Compliance Monitoring, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 128. The submitted title suggests an incident affecting Securities Settlement, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 129. The submitted title suggests an incident affecting SharePoint & File Storage, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 130. The submitted title suggests an incident affecting SimCorp Dimension, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 131. The submitted title suggests an incident affecting Tax Reporting, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 132. The submitted title suggests an incident affecting Trade Matching, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 133. The submitted title suggests an incident affecting Trading Platform, but the actual request is a regular service inquiry. Please confirm the correct handling path and classify the request as a service request instead of an operational incident.
+ 134. The ticket text for CRM & Client Portal is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 135. The ticket text for Cash Management is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 136. The ticket text for Client Reporting is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 137. The ticket text for Corporate Actions is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 138. The ticket text for Fund Pricing is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 139. The ticket text for Identity & Access Management is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 140. The ticket text for NAV Calculation is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 141. The ticket text for Order Management is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 142. The ticket text for Outlook & Email is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 143. The ticket text for Portfolio Accounting is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 144. The ticket text for Regulatory Reporting is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 145. The ticket text for Rimes Data Feed is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 146. The ticket text for Risk & Compliance Monitoring is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 147. The ticket text for Securities Settlement is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 148. The ticket text for SharePoint & File Storage is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 149. The ticket text for SimCorp Dimension is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 150. The ticket text for Tax Reporting is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 151. The ticket text for Trade Matching is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 152. The ticket text for Trading Platform is unclear and not aligned with the expected service request pattern. The message appears incomplete or misrouted and requires review to determine whether it should be rejected or redirected.
+ 153. This issue was raised against CRM & Client Portal, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 154. This issue was raised against Cash Management, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 155. This issue was raised against Client Reporting, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 156. This issue was raised against Corporate Actions, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 157. This issue was raised against Fund Pricing, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 158. This issue was raised against Identity & Access Management, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 159. This issue was raised against NAV Calculation, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 160. This issue was raised against Order Management, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 161. This issue was raised against Outlook & Email, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 162. This issue was raised against Portfolio Accounting, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 163. This issue was raised against Regulatory Reporting, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 164. This issue was raised against Rimes Data Feed, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 165. This issue was raised against Risk & Compliance Monitoring, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 166. This issue was raised against Securities Settlement, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 167. This issue was raised against SharePoint & File Storage, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 168. This issue was raised against SimCorp Dimension, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 169. This issue was raised against Tax Reporting, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 170. This issue was raised against Trade Matching, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 171. This issue was raised against Trading Platform, but the title suggests a service request instead of a true incident. The underlying problem still needs triage and should be reviewed to ensure it is routed through the correct workflow.
+ 172. Trade Matching generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+ 173. Trading Platform generated an automated monitoring alert indicating an operational problem. The log shows repeated execution errors, service degradation, or a processing delay. Please review the event, confirm the impact, and decide whether immediate remediation is needed.
+
+--- 79 UNIQUE COMMENT SENTENCES (by frequency) ---
+
+   1.   5851x  Problem fixed.
+   2.   3850x  Initial triage assigned to Service Desk and reviewed against the service catalogue.
+   3.   3850x  We validated the issue against Emailed Support Tickets and checked whether it matched the expected operating conditions.
+   4.   2231x  Initial triage assigned to Enterprise Applications and reviewed against the service catalogue.
+   5.   2052x  Impact assessment confirmed the issue affected the operational workflow for Emailed Support Tickets.
+   6.   1696x  Initial triage assigned to Investment Operations and reviewed against the service catalogue.
+   7.   1110x  Initial triage assigned to Securities Operations and reviewed against the service catalogue.
+   8.   1080x  Initial triage assigned to Valuation & Pricing and reviewed against the service catalogue.
+   9.   1079x  Initial triage assigned to Client Services and reviewed against the service catalogue.
+  10.   1076x  Initial triage assigned to Risk & Controls and reviewed against the service catalogue.
+  11.   1000x  Resolution recorded: service restored.
+  12.    970x  Resolution recorded: access updated.
+  13.    969x  Resolution recorded: alert closed after validation.
+  14.    949x  Resolution recorded: ticket resolved via workaround.
+  15.    935x  Resolution recorded: issue confirmed as non-urgent.
+  16.    579x  We validated the issue against Trading Platform and checked whether it matched the expected operating conditions.
+  17.    573x  We validated the issue against SimCorp Dimension and checked whether it matched the expected operating conditions.
+  18.    565x  We validated the issue against Outlook & Email and checked whether it matched the expected operating conditions.
+  19.    565x  We validated the issue against Trade Matching and checked whether it matched the expected operating conditions.
+  20.    564x  We validated the issue against Securities Settlement and checked whether it matched the expected operating conditions.
+  21.    561x  We validated the issue against Fund Pricing and checked whether it matched the expected operating conditions.
+  22.    552x  We validated the issue against Portfolio Accounting and checked whether it matched the expected operating conditions.
+  23.    549x  We validated the issue against SharePoint & File Storage and checked whether it matched the expected operating conditions.
+  24.    546x  We validated the issue against Corporate Actions and checked whether it matched the expected operating conditions.
+  25.    544x  We validated the issue against Identity & Access Management and checked whether it matched the expected operating conditions.
+  26.    544x  We validated the issue against CRM & Client Portal and checked whether it matched the expected operating conditions.
+  27.    539x  We validated the issue against Regulatory Reporting and checked whether it matched the expected operating conditions.
+  28.    537x  We validated the issue against Risk & Compliance Monitoring and checked whether it matched the expected operating conditions.
+  29.    535x  We validated the issue against Client Reporting and checked whether it matched the expected operating conditions.
+  30.    520x  Initial triage assigned to Trading Support and reviewed against the service catalogue.
+  31.    520x  We validated the issue against Order Management and checked whether it matched the expected operating conditions.
+  32.    519x  We validated the issue against NAV Calculation and checked whether it matched the expected operating conditions.
+  33.    519x  Initial triage assigned to Market Data Services and reviewed against the service catalogue.
+  34.    519x  We validated the issue against Rimes Data Feed and checked whether it matched the expected operating conditions.
+  35.    514x  Initial triage assigned to Tax & Reporting and reviewed against the service catalogue.
+  36.    514x  We validated the issue against Tax Reporting and checked whether it matched the expected operating conditions.
+  37.    511x  Follow-up review completed and the case is being monitored for recurrence.
+  38.    474x  Initial triage assigned to Treasury & Cash and reviewed against the service catalogue.
+  39.    474x  We validated the issue against Cash Management and checked whether it matched the expected operating conditions.
+  40.    323x  Resolution: Adapter was rejecting allocations due to an incomplete broker account setup. Corrected the setup, reprocessed the batch, and validated matching status for all affected trades.
+  41.    315x  Resolution: Diagnosed a timeout on the position sync job caused by a locked staging table; cleared the session and reran the sync, confirming holdings matched afterward.
+  42.    313x  Resolution: Reclassified the ticket as a service request, then provisioned the requested shared mailbox and distribution list with the correct access permissions.
+  43.    310x  Impact assessment confirmed the issue affected the operational workflow for Outlook & Email.
+  44.    308x  Impact assessment confirmed the issue affected the operational workflow for Client Reporting.
+  45.    305x  Impact assessment confirmed the issue affected the operational workflow for SimCorp Dimension.
+  46.    303x  Impact assessment confirmed the issue affected the operational workflow for Portfolio Accounting.
+  47.    303x  Impact assessment confirmed the issue affected the operational workflow for Trading Platform.
+  48.    303x  Impact assessment confirmed the issue affected the operational workflow for SharePoint & File Storage.
+  49.    303x  Resolution: Several events were missing option code mappings after ingestion. Updated the mapping table, reprocessed the feed, and confirmed elections displayed correctly.
+  50.    301x  Resolution: Set up the shared mailbox and DL as requested, granted the team the necessary send/access rights, and confirmed visibility in Outlook.
+  51.    298x  Impact assessment confirmed the issue affected the operational workflow for Trade Matching.
+  52.    295x  Resolution: Submission was rejected due to missing classification data on new entity records. Updated the master data, regenerated the file, and resubmitted successfully.
+  53.    294x  Impact assessment confirmed the issue affected the operational workflow for Identity & Access Management.
+  54.    292x  Impact assessment confirmed the issue affected the operational workflow for Risk & Compliance Monitoring.
+  55.    291x  Impact assessment confirmed the issue affected the operational workflow for CRM & Client Portal.
+  56.    291x  Resolution: Root cause was an incomplete option-code mapping for a batch of events; corrected the mapping and reprocessed, verifying elections appeared on the dashboard.
+  57.    289x  Resolution: Diagnosed a broken broker routing link after the account switch; updated the routing table and confirmed subsequent orders flowed through without manual intervention.
+  58.    289x  Impact assessment confirmed the issue affected the operational workflow for Corporate Actions.
+  59.    288x  Resolution: Traced the defect to a template rendering condition that evaluated incorrectly in production. Corrected the template logic, reran the affected batch, and spot-checked output PDFs before release.
+  60.    287x  Impact assessment confirmed the issue affected the operational workflow for Securities Settlement.
+  61.    287x  Resolution: Reviewed the request with the tax team lead, granted the standard processing entitlement, and verified access to the output workspace.
+  62.    284x  Resolution: Traced the gateway rejection to incomplete counterparty classification; corrected the records, regenerated the submission, and confirmed acceptance.
+  63.    284x  Impact assessment confirmed the issue affected the operational workflow for Order Management.
+  64.    283x  Impact assessment confirmed the issue affected the operational workflow for Fund Pricing.
+  65.    281x  Resolution: Replication job had stalled due to a temporary database lock. Cleared the lock, restarted the job from its last checkpoint, and reconciled positions against downstream reporting.
+  66.    281x  Resolution: The fee section was suppressed by a broken conditional in the report template; fixed the condition, regenerated the client batch, and confirmed the fee table now renders correctly.
+  67.    280x  Resolution: Found a missing broker SSI mapping causing allocation rejections. Added the mapping, replayed the rejected messages, and confirmed the trades matched successfully.
+  68.    274x  Resolution: Reconciled the cash ledger against the bank statement and found the sweep missed the prior day's cutoff; booked a value-dated adjustment and confirmed the balance with the desk.
+  69.    273x  Impact assessment confirmed the issue affected the operational workflow for NAV Calculation.
+  70.    272x  Impact assessment confirmed the issue affected the operational workflow for Tax Reporting.
+  71.    272x  Resolution: Traced the shortfall to a missed banking cutoff on the margin sweep; corrected with an intraday adjustment and confirmed with Treasury.
+  72.    270x  Resolution: Confirmed the withholding tax workflow license was provisioned and validated the user could access the quarterly extract tool.
+  73.    270x  Resolution: A stale clearing account mapping from a recent broker change was blocking order routing. Corrected the mapping, tested with one order, then released the remaining held orders.
+  74.    268x  Impact assessment confirmed the issue affected the operational workflow for Regulatory Reporting.
+  75.    267x  Impact assessment confirmed the issue affected the operational workflow for Cash Management.
+  76.    266x  Impact assessment confirmed the issue affected the operational workflow for Rimes Data Feed.
+  77.    210x  Resolution: Reviewed the settlement message queue, cleared several stuck acknowledgements, and replayed the pending confirmations so custody statuses synced back to the dashboard.
+  78.    194x  Resolution: Root cause was a stalled consumer on the settlement queue. Restarted the listener, replayed the backlog, and confirmed downstream custody records caught up.
+  79.    193x  Resolution: Custodian was late sending status updates; paused automated fail-chasing while we waited, then matched statements and reconciled the backlog once messages came through.
+
+--- CONTROLLED VOCABULARIES ---
+
+Work type   : Incident (16000), Service Request (4000)
+Priority    : lowest (10037), low (6070), medium (1880), high (1629), highest (384)
+Urgency     : lowest (10016), low (5979), medium (2008), high (1618), highest (379)
+Impact      : lowest (10064), low (5962), medium (1962), high (1636), highest (376)
+Status      : done (16969), in progress (2064), open (967)
+Resolution  : cannot reproduce (4322), clarification (4243), done (4236), cancelled (4168), None (3031)
+
+Affected Business or IT Services (20 distinct):
+      5423  Emailed Support Tickets
+       805  Outlook & Email
+       801  Trade Matching
+       800  Trading Platform
+       799  Fund Pricing
+       797  SimCorp Dimension
+       780  Corporate Actions
+       778  Securities Settlement
+       777  Risk & Compliance Monitoring
+       774  Portfolio Accounting
+       768  CRM & Client Portal
+       764  Regulatory Reporting
+       759  SharePoint & File Storage
+       755  Identity & Access Management
+       751  Rimes Data Feed
+       746  Client Reporting
+       739  Order Management
+       737  NAV Calculation
+       731  Tax Reporting
+       716  Cash Management
+
+Business Entity (5 distinct):
+      4113  Luxembourg
+      4015  Nordics
+      3976  Switzerland
+      3965  Germany
+      3931  France
+
+Service Team(s) (11 distinct):
+      5423  Service Desk
+      3116  Enterprise Applications
+      2375  Investment Operations
+      1558  Securities Operations
+      1541  Risk & Controls
+      1536  Valuation & Pricing
+      1514  Client Services
+       751  Market Data Services
+       739  Trading Support
+       731  Tax & Reporting
+       716  Treasury & Cash
+
+Reporters (92 distinct), Assignees (30 distinct)
+
+  Reporters:
+      3512  sa_accounting@intcom.com
+      3401  sa_securities@intcom.com
+       231  info@extcom_05.com
+       228  info@extcom_12.com
+       220  info@extcom_28.com
+       214  info@extcom_16.com
+       212  info@extcom_08.com
+       208  info@extcom_18.com
+       206  info@extcom_14.com
+       204  info@extcom_30.com
+       204  info@extcom_25.com
+       202  info@extcom_01.com
+       202  info@extcom_02.com
+       201  info@extcom_11.com
+       200  info@extcom_03.com
+       199  info@extcom_19.com
+       198  info@extcom_29.com
+       198  info@extcom_21.com
+       198  info@extcom_04.com
+       197  info@extcom_07.com
+       196  info@extcom_13.com
+       196  info@extcom_27.com
+       196  info@extcom_09.com
+       192  info@extcom_24.com
+       191  info@extcom_10.com
+       190  info@extcom_06.com
+       187  info@extcom_22.com
+       184  info@extcom_15.com
+       181  info@extcom_23.com
+       180  info@extcom_26.com
+       178  info@extcom_20.com
+       174  info@extcom_17.com
+       140  samuel.hughes@intcom.com
+       136  vicky.chen@intcom.com
+       136  elena.novak@intcom.com
+       134  pierre.johnson@intcom.com
+       134  rachel.ward@intcom.com
+       134  hannah.pekic@intcom.com
+       133  zoe.peters@intcom.com
+       130  gina.muller@intcom.com
+       130  xena.schmidt@intcom.com
+       129  daniel.taylor@intcom.com
+       129  alice.meyer@intcom.com
+       129  ruth.berg@intcom.com
+       129  goran.kubik@intcom.com
+       127  celine.novak@intcom.com
+       127  noah.hoffman@intcom.com
+       125  willa.foster@intcom.com
+       125  oliver.varga@intcom.com
+       125  karen.brown@intcom.com
+       124  luca.rinaldi@intcom.com
+       124  jack.martin@intcom.com
+       124  felix.meyer@intcom.com
+       123  gwen.santos@intcom.com
+       122  frank.ross@intcom.com
+       121  benjamin.hale@intcom.com
+       121  beatrice.monti@intcom.com
+       120  carlos.ortiz@intcom.com
+       120  tara.nielsen@intcom.com
+       120  leo.zimmer@intcom.com
+       119  irina.sokolov@intcom.com
+       119  tania.gupta@intcom.com
+       119  ursula.rossi@intcom.com
+       118  nora.leclerc@intcom.com
+       118  jules.carr@intcom.com
+       118  ulrich.fischer@intcom.com
+       117  quinn.anderson@intcom.com
+       117  adam.paul@intcom.com
+       117  ivan.lee@intcom.com
+       116  victor.singh@intcom.com
+       115  xavier.bennett@intcom.com
+       114  evelyn.klein@intcom.com
+       114  david.kim@intcom.com
+       114  jenn.denisov@intcom.com
+       113  henry.patel@intcom.com
+       112  maia.berg@intcom.com
+       112  simon.wang@intcom.com
+       110  carla.dubois@intcom.com
+       109  paul.muller@intcom.com
+       109  dorian.torres@intcom.com
+       108  ines.roux@intcom.com
+       108  alina.martin@intcom.com
+       108  ophelia.kim@intcom.com
+       108  bruno.davis@intcom.com
+       108  eva.wagner@intcom.com
+       107  william.maier@intcom.com
+       105  maya.kerr@intcom.com
+       104  yara.hamon@intcom.com
+       102  katie.hansen@intcom.com
+        99  yves.moreau@intcom.com
+        98  hugo.dumas@intcom.com
+        94  fiona.pierre@intcom.com
+
+  Assignees:
+       718  maya.kerr@intcom.com
+       712  henry.patel@intcom.com
+       709  nora.leclerc@intcom.com
+       709  vicky.chen@intcom.com
+       703  leo.zimmer@intcom.com
+       691  gina.muller@intcom.com
+       689  adam.paul@intcom.com
+       685  zoe.peters@intcom.com
+       683  tania.gupta@intcom.com
+       681  david.kim@intcom.com
+       677  carlos.ortiz@intcom.com
+       674  william.maier@intcom.com
+       674  ulrich.fischer@intcom.com
+       669  pierre.johnson@intcom.com
+       668  samuel.hughes@intcom.com
+       663  beatrice.monti@intcom.com
+       660  irina.sokolov@intcom.com
+       658  xena.schmidt@intcom.com
+       655  elena.novak@intcom.com
+       654  alice.meyer@intcom.com
+       654  daniel.taylor@intcom.com
+       653  ruth.berg@intcom.com
+       650  quinn.anderson@intcom.com
+       648  jack.martin@intcom.com
+       638  frank.ross@intcom.com
+       635  karen.brown@intcom.com
+       633  benjamin.hale@intcom.com
+       626  oliver.varga@intcom.com
+       618  carla.dubois@intcom.com
+       613  yves.moreau@intcom.com
